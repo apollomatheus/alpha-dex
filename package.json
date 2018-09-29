@@ -1,0 +1,38 @@
+{
+  "name": "alphadex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package:mac": "electron-packager . --platform=darwin --arch=x64 --out=build/ --ignore=assets/bin/win64 --ignore=assets/bin/linux64 --overwrite",
+    "package:win": "electron-packager . --platform=win32 --arch=x64 --out=build/ --ignore=assets/bin/osx --ignore=assets/bin/linux64 --overwrite",
+    "package:linux": "electron-packager . --platform=linux --arch=x64 --out=build/ --ignore=assets/bin/win64 --ignore=assets/bin/osx --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollomatheus/alpha-dex.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apollomatheus/alpha-dex/issues"
+  },
+  "homepage": "https://github.com/apollomatheus/alpha-dex#readme",
+  "devDependencies": {
+    "electron": "^2.0.3",
+    "electron-packager": "^12.1.0"
+  },
+  "dependencies": {
+    "bip39": "^2.5.0",
+    "bluebird": "^3.5.1",
+    "fix-path": "^2.1.0",
+    "fs-extra": "^4.0.3",
+    "mkdirp": "^0.5.1",
+    "portscanner": "^2.2.0",
+    "ps-node": "^0.1.6",
+    "request": "^2.87.0",
+    "zcore-lib": "https://github.com/apollomatheus/zcore-lib.git",
+    "store":"https://github.com/apollomatheus/store.js"
+  }
+}
