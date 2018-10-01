@@ -2,6 +2,8 @@ const {app, BrowserWindow} = require('electron')
 var url = require('url')
 const path = require('path')
 
+var shepherd = require('./src/ipc/ipc');
+
 let win = null;
 
 app.on('ready', function () {
@@ -16,12 +18,15 @@ app.on('ready', function () {
     slashes: true
   }));
 
+  win.webContents.toggleDevTools();
+
   // Remove window once app is closed
   win.on('closed', function () {
   win = null;
   });
 
 });
+
 
 //create the application window if the window variable is null
 app.on('activate', () => {

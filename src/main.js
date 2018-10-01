@@ -5,6 +5,8 @@ import Vuetify from 'vuetify';
 import axios from 'axios';
 import VueCookies from 'vue-cookies';
 
+import store from './store';
+
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'vuetify/dist/vuetify.min.css';
 
@@ -19,5 +21,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
 });

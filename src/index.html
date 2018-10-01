@@ -8,4 +8,13 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    const { ipcRenderer } = window.require('electron');
+
+    // In renderer process (web page).
+    window.EIPC = function (data) {
+      let reply = ipcRenderer.sendSync('EIPC-command', data);
+      return reply;
+    }
+  </script>
 </html>

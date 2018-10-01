@@ -7,6 +7,7 @@
   "scripts": {
     "start": "electron .",
     "build": "node build/build.js",
+    "linux-test": "node build/build.js && npm run package:linux",
     "package:mac": "electron-packager . --platform=darwin --arch=x64  --out=bin/ --ignore=assets/bin/win64 --ignore=assets/bin/linux64 --overwrite",
     "package:win": "electron-packager . --platform=win32 --arch=x64  --out=bin/ --ignore=assets/bin/osx --ignore=assets/bin/linux64 --overwrite",
     "package:linux": "electron-packager . --platform=linux --arch=x64  --out=bin/ --ignore=assets/bin/win64 --ignore=assets/bin/osx --overwrite"
